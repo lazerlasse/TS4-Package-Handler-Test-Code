@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Sims 4 Packet - Test", "The Sims 4 Packet - Test\The Sims 4 Packet - Test.csproj", "{FA892266-1771-4EEE-AE34-F90447929A2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36CB0892-6F2F-4F48-96DC-CE3D6150468F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA892266-1771-4EEE-AE34-F90447929A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA892266-1771-4EEE-AE34-F90447929A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA892266-1771-4EEE-AE34-F90447929A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA892266-1771-4EEE-AE34-F90447929A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

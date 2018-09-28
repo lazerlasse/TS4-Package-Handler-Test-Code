@@ -1,0 +1,48 @@
+﻿<Window x:Class="The_Sims_4_Packet___Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:The_Sims_4_Packet___Test"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="720" MinWidth="800" Height="720" Width='800'>
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="SourcePatchTextView" Grid.Column="0" Margin="10,10,5,5" IsEnabled="False" Height="20" TextWrapping="Wrap" />
+            <Button x:Name="BrowseButton" Grid.Column="1" Margin="5,10,5,5" Height="20" Content="Gennemse" Click="BrowseButton_Click" />
+            <Button x:Name="ScanButton" Grid.Column="2" Margin="5,10,10,5" Height="20" Content="Scan" Click="ScanButton_Click" />
+        </Grid>
+        <Label Content="Oversigt" Width="auto" FontSize="12" FontWeight="Bold" Margin="5,2,5,2"/>
+        <DataGrid x:Name="FileViewerDataGrid" ItemsSource="{Binding IsAsync=True}" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" Margin="10,5,10,10" Height="250">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Package Name" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageName}"/>
+                <DataGridTextColumn Header="Package Type" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageType}"/>
+                <DataGridTextColumn Header="Package Created" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageCreated}"/>
+                <DataGridTextColumn Header="Last Edit" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageEdited}"/>
+                <DataGridTextColumn Header="Resource" Width="auto" IsReadOnly="True" Binding="{Binding Path=ResourceTextType}" />
+                <DataGridTextColumn Header="Resource Type" Width="auto" IsReadOnly="True" Binding="{Binding Path=ResourceType}" />
+                <DataGridTextColumn Header="Resource Group" Width="auto" IsReadOnly="True" Binding="{Binding Path=ResourceGroup}" />
+                <DataGridTextColumn Header="Resource Instance" Width="auto" IsReadOnly="True" Binding="{Binding Path=ResourceInstance}" />
+                <DataGridTextColumn Header="Conflict" Width="auto" IsReadOnly="True" Binding="{Binding Path=ConflictDetected}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Package detaljer." Width="auto" FontSize="12" FontWeight="Bold" Margin="5,2,5,2"/>
+        <DataGrid x:Name="PackageDetailedViewDataGrid" ItemsSource="{Binding IsAsync=True}" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" Margin="10,5,10,10" Height="250">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Package Name" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageName}"/>
+                <DataGridTextColumn Header="Package Type" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageType}"/>
+                <DataGridTextColumn Header="Package Created" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageCreated}"/>
+                <DataGridTextColumn Header="Last Edit" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageEdited}"/>
+                <DataGridTextColumn Header="Conflict" Width="auto" IsReadOnly="True" Binding="{Binding Path=ConflictDetected}"/>
+                <DataGridTextColumn Header="Resources" Width="auto" IsReadOnly="True" Binding="{Binding Path=PackageResources}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="ProgressTextBox" Content="Klar" HorizontalAlignment="Center" Padding="2" Margin="0,10,0,0" Width="400" IsEnabled="False"/>
+        <ProgressBar x:Name="ProgressBar1" Height="15" Width="400" HorizontalAlignment="Center" Padding="5" IsIndeterminate="False"/>
+    </StackPanel>
+</Window>
